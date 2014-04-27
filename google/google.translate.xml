@@ -6,7 +6,7 @@
   <bindings>
     <select itemPath="json.responseData.translatedText" produces="JSON">
       <urls>
-        <url>http://www.google.com/uds/Gtranslate?context=22&amp;langpair={source}%7C{target}&amp;v=1.0</url>
+        <url>http://www.google.com/uds/Gtranslate?context=22&amp;langpair={source}%7C{target}&amp;v=1.0&amp;ie=UTF-8</url>
       </urls>
       <inputs>
         <key id='q' type='xs:string' paramType='query' required="true" />
