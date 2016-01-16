@@ -9,7 +9,7 @@
   <bindings>
     <select itemPath="sectors.sector" produces="XML">
       <urls>
-       <url></ur>l
+       <url></url>
       </urls>
       <inputs></inputs>
 <execute><![CDATA[
