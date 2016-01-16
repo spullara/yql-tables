@@ -27,7 +27,7 @@
     var sectorQuery = y.query(
 	"select * from html " +
 	"where url=@url and " + 
-	"xpath='//td[@width=\"50%\"]/table/tr/td'",
+	"xpath='//td[@width=\"50%\"]/table//tr/td'",
 	{url:url});
 
     var sectors = <sectors></sectors>;
@@ -39,13 +39,13 @@
 	    if (sector != null)
 		sectors.appendChild(sector);
 
-	    sectorName = td..strong.text().toString().trim();
+	    sectorName = td..b.trim();
 	    sector = <sector name={sectorName} />
 	} else if (td.@width != "10") {
-	    href=td.a.@href.toString().trim();
+	    href=td..a.@href.toString().trim();
 	    if (href.length > 0) {
-		industryID = td.a.@href.toString().match(/(\d+)\.html$/)[1];
-		industryName = td.a.font.text().toString().trim();
+		industryID = td..a.@href.toString().match(/(\d+)\.html$/)[1];
+		industryName = td..a.text().toString().trim();
 		industryName = industryName.replace(/\s+/g, " ");
 		industry = <industry id={industryID} name={industryName} />;
 		sector.appendChild(industry);
