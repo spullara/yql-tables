@@ -9,7 +9,7 @@
   <bindings>
     <select itemPath="sectors.sector" produces="XML">
       <urls>
-       <url></url>
+       <url></ur>l
       </urls>
       <inputs></inputs>
 <execute><![CDATA[
@@ -45,7 +45,7 @@
 	    href=td..a.@href.toString().trim();
 	    if (href.length > 0) {
 		industryID = td..a.@href.toString().match(/(\d+)\.html$/)[1];
-		industryName = td..a.font.text().toString().trim();
+		industryName = td..a.text().toString().trim();
 		industryName = industryName.replace(/\s+/g, " ");
 		industry = <industry id={industryID} name={industryName} />;
 		sector.appendChild(industry);
